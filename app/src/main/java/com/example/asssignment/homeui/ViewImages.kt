@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.asssignment.R
+import kotlinx.android.synthetic.main.fragment_viewimages.view.*
 
 class ViewImages : Fragment() {
 
@@ -19,6 +20,8 @@ class ViewImages : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_viewimages, container, false)
+        view.recyclerview.setHasFixedSize(true)
+
         return  view
     }
 
