@@ -1,11 +1,8 @@
 package com.example.asssignment
 
 import android.content.Intent
-import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.example.asssignment.database.Details
 import com.example.asssignment.database.DetailsDatabase
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.coroutines.CoroutineScope
@@ -36,8 +33,10 @@ class SignInActivity : AppCompatActivity(),CoroutineScope {
         button_sign_in.setOnClickListener {
             val email = edit_text_email.editText?.text
             val password = edit_text_password.editText?.text
-            if (email.toString() == emaildb && password.toString() == passworddb)
+            if (email.toString() == emaildb && password.toString() == passworddb){
                 startActivity(Intent(this@SignInActivity,HomeActivity::class.java))
+                finish()
+            }
             else
                 snackbar("Credentials do not match!",findViewById(R.id.root_layout))
         }
