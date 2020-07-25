@@ -69,7 +69,7 @@ class ViewImages : Fragment() {
                 val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerview)
 //                recyclerview.setHasFixedSize(true)
                 val imageAdapter = ImageAdapter(mCtx,arrayList)
-                recyclerview.layoutManager = LinearLayoutManager(mCtx)
+//                recyclerview.layoutManager = LinearLayoutManager(mCtx)
                 recyclerview.adapter = imageAdapter
             }
 

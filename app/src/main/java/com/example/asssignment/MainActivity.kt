@@ -10,11 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        act = this
         SignIn.setOnClickListener {
             startActivity(Intent(this,SignInActivity::class.java))
         }
         SignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
         }
+    }
+    companion object{
+        public var act: AppCompatActivity? = null
     }
 }

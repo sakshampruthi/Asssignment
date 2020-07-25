@@ -39,6 +39,7 @@ class SignInActivity : AppCompatActivity(),CoroutineScope {
             }
             else
                 snackbar("Credentials do not match!",findViewById(R.id.root_layout))
+            MainActivity.act?.finish()
         }
     }
     override val coroutineContext: CoroutineContext
